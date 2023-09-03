@@ -1,11 +1,8 @@
-module com.example.citiesgame {
+module com.example.CitiesGame {
     requires javafx.controls;
     requires javafx.fxml;
-    requires javafx.web;
+    requires org.jsoup;
 
-    requires org.controlsfx.controls;
-    requires org.kordamp.ikonli.javafx;
-    requires eu.hansolo.tilesfx;
 
     opens com.example.citiesgame to javafx.fxml;
     exports com.example.citiesgame;
