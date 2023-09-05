@@ -27,8 +27,7 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <Text fx:id="score" layoutX="165.0" layoutY="303.0" onDragDetected="#scoreGame" strokeType="OUTSIDE" strokeWidth="0.0" text="Score:" textAlignment="CENTER" wrappingWidth="70.60302734375" />
-      <Button fx:id="end1" layoutX="86.0" layoutY="394.0" mnemonicParsing="false" onAction="#surrended" text="Surrender" />
-      <Button fx:id="end2" layoutX="244.0" layoutY="394.0" mnemonicParsing="false" onAction="#finishGame" text="Finish the game" />
+      <Button fx:id="end" layoutX="154.0" layoutY="430.0" mnemonicParsing="false" onAction="#finishGame" text="Finish the game" />
+      <Label fx:id="scorelabel" layoutX="50.0" layoutY="281.0" onDragDetected="#scoreGame" text="Score:" />
    </children>
 </AnchorPane>

@@ -22,16 +22,13 @@ public class PlayController {
     private TextField cityNameInputField;
 
     @FXML
-    private Button end1;
-
-    @FXML
-    private Button end2;
+    private Button end;
 
     @FXML
     private Button move;
 
     @FXML
-    private Text score;
+    private Label scorelabel;
 
     @FXML
     private Label startGame;
@@ -66,11 +63,6 @@ public class PlayController {
 
     @FXML
     void scoreGame(MouseEvent event) {
-
-    }
-
-    @FXML
-    void surrended(ActionEvent event) {
 
     }
 

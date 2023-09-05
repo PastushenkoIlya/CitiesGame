@@ -23,14 +23,14 @@ public class HelloApplication extends Application {
 
         Button startButton = new Button("START");
         startButton.setOnAction(event -> {
-            // Відкрити головне вікно гри після натискання кнопки
+            // Open the main game window after pressing the button
             PlayWindow gameWindow = new PlayWindow();
             try {
                 gameWindow.start(new Stage());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-            stage.close(); // Закрити вітальне вікно
+            stage.close(); // Close the welcome window
         });
 
         VBox vbox = new VBox(10);

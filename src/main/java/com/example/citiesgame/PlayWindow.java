@@ -24,7 +24,7 @@ public class PlayWindow extends Application {
             Text answer = new Text();
             Label computersAnswer = new Label("Computer answered: " + answer.getText());
 
-            // Додайте обробник подій для перевірки введеного слова
+            // Add an event handler to check the entered word
             VBox vbox = new VBox(10);
             vbox.getChildren().addAll(enterLabel, inputField, clickButton, computersAnswer);
             vbox.setAlignment(javafx.geometry.Pos.CENTER);
