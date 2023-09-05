@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
@@ -28,6 +29,18 @@ public class PlayController {
     private Button move;
 
     @FXML
+    private ProgressBar myProgressBar;
+
+    @FXML
+    private Label percent;
+
+    @FXML
+    private Button player1Computer;
+
+    @FXML
+    private Button player2User;
+
+    @FXML
     private Label scorelabel;
 
     @FXML
@@ -35,9 +48,15 @@ public class PlayController {
 
     @FXML
     private Text text;
+    double progress;
 
     @FXML
     void cityNameInputField(ActionEvent event) {
+
+    }
+
+    @FXML
+    void computerButton(ActionEvent event) {
 
     }
 
@@ -57,8 +76,17 @@ public class PlayController {
     }
 
     @FXML
-    void makeAMove(ActionEvent event) {
+    void gamePercentage(MouseEvent event) {
 
+    }
+
+    @FXML
+    void makeAMove(ActionEvent event) {
+        if(progress < 0.9) {
+            progress += 0.01;
+            myProgressBar.setProgress(progress);
+            percent.setText(Integer.toString((int) Math.round(progress * 100)) + " %");
+        }
     }
 
     @FXML
@@ -67,8 +95,13 @@ public class PlayController {
     }
 
     @FXML
-    void initialize() {
+    void userButton(ActionEvent event) {
 
+    }
+
+    @FXML
+    void initialize() {
+        myProgressBar.setStyle("-fx-accent: rgba(80, 182, 240, 1);");
     }
 
 }

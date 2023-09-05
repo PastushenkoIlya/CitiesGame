@@ -19,9 +19,8 @@ public class HelloApplication extends Application {
         stage.setTitle("Game Cities");
 
         Label welcomeText = new Label("Welcome to the game of childhood, to the game of Сities!");
-
-
         Button startButton = new Button("START");
+
         startButton.setOnAction(event -> {
             // Open the main game window after pressing the button
             PlayWindow gameWindow = new PlayWindow();
