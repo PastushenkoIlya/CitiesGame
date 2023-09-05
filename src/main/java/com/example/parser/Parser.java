@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Parser {
-    public List<String> parse() throws IOException {
+    public static List<String> parse() throws IOException {
         //connecting to a wiki page
         Document document = Jsoup.connect("https://en.m.wikipedia.org/wiki/List_of_cities_in_Ukraine").get();
         //getting all names of cities

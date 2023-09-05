@@ -9,12 +9,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class PlayWindow extends Application {
         @Override
         public void start(Stage stage) throws IOException {
+            //creating a stage
             FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("play-view.fxml"));
             Scene scene = new Scene(loader.load(),400,500);
             stage.setTitle("Game Cities");
@@ -30,6 +30,10 @@ public class PlayWindow extends Application {
             vbox.setAlignment(javafx.geometry.Pos.CENTER);
             stage.setScene(scene);
 
+            //creating a list of words
+            //moved to controller
+
+            //starting game
             stage.show();
         }
         public static void main(String[] args) {
