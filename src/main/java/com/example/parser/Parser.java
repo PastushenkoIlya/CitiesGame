@@ -3,6 +3,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -15,6 +16,6 @@ public class Parser {
         //cleaning links like -> [a]
         String [] words = table.replaceAll( "^\\[", "").split(" ");
         //casting words into list
-        return Arrays.asList(words);
+        return new ArrayList<String>(Arrays.asList(words));
     }
 }

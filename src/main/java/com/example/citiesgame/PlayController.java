@@ -17,6 +17,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 public class PlayController {
 
@@ -104,10 +105,32 @@ public class PlayController {
             text.setText(answerOptions.get(rand.nextInt(answerOptions.size())));
 
              */
-            text.setText(dataSingleton.getAvailableWords());
-            dataSingleton.setLastWord(dataSingleton.getEnteredWord());
+            dataSingleton.setLastWord(dataSingleton.getEnteredWord().toLowerCase());
+            String computerAnswer = LogicUtils.getFirstAvailableWord(dataSingleton.getAvailableWords(),
+                    dataSingleton.getLastWord());
+            if(computerAnswer == null) {
+                System.out.println("you won on round :" + dataSingleton.getMoveCounter());
+
+                /*EndOfTheGame gameoverScene = new EndOfTheGame();
+                try {
+                    gameoverScene.start(new Stage());
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                stage.close(); // Закрити вітальне вікно*/
+            }
+            dataSingleton.setEnteredWord(computerAnswer);
+            text.setText(dataSingleton.getEnteredWord());
+            //adding to used words
+            dataSingleton.addUsedWords(dataSingleton.getEnteredWord());
+            //removing from available words list
+            dataSingleton.removeAvailableWords(dataSingleton.getEnteredWord());
+
+            dataSingleton.setLastWord(dataSingleton.getEnteredWord().toLowerCase());
 
             dataSingleton.incrementMoveCounter();
+            //score output
+            //score.setText(dataSingleton.getMoveCounter());
         }
 
     }

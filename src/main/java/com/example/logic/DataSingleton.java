@@ -44,7 +44,8 @@ public class DataSingleton {
         this.availableWords = availableWords;
     }
     public void removeAvailableWords(String enteredWord){
-        availableWords.remove(enteredWord);
+        if(availableWords == null) return;
+        availableWords.remove(LogicUtils.caseFormatString(enteredWord));
     }
 
     public List<String> getUsedWords() {
@@ -55,8 +56,8 @@ public class DataSingleton {
         usedWords.add(usedWord);
     }
 
-    public int getMoveCounter() {
-        return moveCounter;
+    public String getMoveCounter() {
+        return String.valueOf(moveCounter);
     }
 
     public void setMoveCounter(int moveCounter) {

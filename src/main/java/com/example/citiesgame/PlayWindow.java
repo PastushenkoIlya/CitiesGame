@@ -23,15 +23,15 @@ public class PlayWindow extends Application {
             Button clickButton = new Button("Make a move");
             Text answer = new Text();
             Label computersAnswer = new Label("Computer answered: " + answer.getText());
+            Label score = new Label();
+            Text scoreOutput = new Text();
+
 
             // Додайте обробник подій для перевірки введеного слова
             VBox vbox = new VBox(10);
             vbox.getChildren().addAll(enterLabel, inputField, clickButton, computersAnswer);
             vbox.setAlignment(javafx.geometry.Pos.CENTER);
             stage.setScene(scene);
-
-            //creating a list of words
-            //moved to controller
 
             //starting game
             stage.show();
