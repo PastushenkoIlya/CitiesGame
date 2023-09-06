@@ -1,4 +1,4 @@
 package com.example.citiesgame;
 
-public class EndController {
+public class UserWonController {
 }

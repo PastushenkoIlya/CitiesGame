@@ -33,8 +33,7 @@ public class HelloApplication extends Application {
         });
 
         VBox vbox = new VBox(10);
-        vbox.getChildren().add(welcomeText);
-        vbox.getChildren().add(startButton);
+        vbox.getChildren().addAll(welcomeText, startButton);
         vbox.setAlignment(Pos.CENTER);
 
         Scene scene = new Scene(vbox, 400, 100);
